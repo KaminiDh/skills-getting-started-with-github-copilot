@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const spotsLeft = details.max_participants - details.participants.length;
 
         activityCard.innerHTML = `
-          <h4>${name}</h4>
+          <div class="activity-heading" tabindex="0">
+            <h4>${name}</h4>
+            <div class="activity-flyout">
+              <h5>Details</h5>
+              <p>${details.description}</p>
+            </div>
+          </div>
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>

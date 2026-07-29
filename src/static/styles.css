@@ -70,6 +70,42 @@ section h3 {
   color: #0066cc;
 }
 
+.activity-heading {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.activity-flyout {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 10;
+  min-width: 220px;
+  max-width: 280px;
+  padding: 10px 12px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.activity-heading:hover .activity-flyout,
+.activity-heading:focus-within .activity-flyout {
+  display: block;
+}
+
+.activity-flyout h5 {
+  margin: 0 0 6px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.activity-flyout p {
+  margin: 0;
+}
+
 .activity-card p {
   margin-bottom: 8px;
 }
